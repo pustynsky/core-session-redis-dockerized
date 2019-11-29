@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  netcore-session-redis:
+    image: ${DOCKER_REGISTRY-}netcoresessionredis
+    build:
+      context: .
+      dockerfile: netcore-session-redis/Dockerfile
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+    - 6379

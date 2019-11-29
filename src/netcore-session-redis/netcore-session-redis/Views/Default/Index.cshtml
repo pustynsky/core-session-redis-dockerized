@@ -1,0 +1,19 @@
+﻿<!-- Following line is for asp-helpers support (as asp-controller, asp-action etc) -->
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model netcore_session_redis.Models.PocoModel;
+@{
+    ViewData["Title"] = "Default";
+}
+
+<h1>Redis value storage</h1>
+<form asp-controller="Default" asp-action="Store" method="post">
+    <input type="text" name="Id" id="Id" value="@Model.Id" readonly="readonly" />
+    <input type="text" name="Name" id="Name" />
+    <input type="submit" value="Store" />
+</form>
+<br />
+<form asp-controller="Default" asp-action="Retrieve" method="get">
+    <input type="submit" value="Retrieve" />
+</form>
+
