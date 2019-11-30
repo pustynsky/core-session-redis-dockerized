@@ -9,11 +9,12 @@ Requrements for run:
 2. .NET Core 3.1
 
 Nuget Dependency: Microsoft.Extentions.Caching.Redis
-Check out new async pattern like IAsyncDisposable implemented in BinarySerializer class
+
+Todo: 
+- Check out new async pattern like IAsyncDisposable implemented in BinarySerializer class
 await using(MemoryStream ms = new MemoryStream())
-
-
-To clear Redis cache in docker use 
-
+To read more: https://docs.microsoft.com/en-us/dotnet/api/system.iasyncdisposable
+- Don't forget to add @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers to _ViewImports.cshtml or regular cshtml file in order to support tag helpers on your pages.
+- To clear Redis cache in docker use 
 docker exec -it container-name redis-cli FLUSHALL
 
